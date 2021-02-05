@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/h3des/Desktop/Code/Python/CTF'
+let g:netrw_dirhist_3='/home/h3des'
+let g:netrw_dirhist_2='/home/h3des/,vim'
+let g:netrw_dirhist_1='/home/h3des'
