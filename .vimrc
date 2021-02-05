@@ -48,6 +48,7 @@ set laststatus=2
 
 " Easymotion 
 " s{char}{char} to move to {char}{char} overwindow
+<<<<<<< HEAD
 nmap <Leader>F <Plug>(easymotion-overwin-f)
 
 " Move to line overwindow
@@ -55,6 +56,15 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 
 "Searcn n-chars
 nmap / <Plug>(easymotion-sn)
+=======
+nmap <Leader>F <Plug>(easymotion-overwin-f)         " / + f "
+
+" Move to line overwindow
+nmap <Leader>L <Plug>(easymotion-overwin-line)      " / + L" 
+
+"Searcn n-chars
+nmap / <Plug>(easymotion-sn)                        " / "
+>>>>>>> c28d3a2c69b6822082fbd12c7d306dd90f0389f4
 
 " Prettier config 
 let g:prettier#autoformat = 0
