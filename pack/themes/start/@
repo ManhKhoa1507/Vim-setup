@@ -1,0 +1,14 @@
+" config the dracula theme
+packadd! dracula
+colorscheme dracula
+
+syntax enable 
+set tabstop=4
+set shiftwidth=4
+set expandtab 
+set number
+filetype indent on 
+set autoindent
+
+" Python Config
+let python_highlight_all = 1
