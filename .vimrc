@@ -14,6 +14,9 @@ set expandtab
 set autoindent
 set nocompatible
 
+" Set ruler 
+set ruler
+
 " Set cursor highlight
 set cursorline
 
@@ -42,6 +45,16 @@ nnoremap <C-f> :NERDTreeFind<CR>       " Find
 
 " See the airline bar when start up Vim
 set laststatus=2 
+
+" Easymotion 
+" s{char}{char} to move to {char}{char} overwindow
+nmap <Leader>F <Plug>(easymotion-overwin-f)         " / + f "
+
+" Move to line overwindow
+nmap <Leader>L <Plug>(easymotion-overwin-line)      " / + L" 
+
+"Searcn n-chars
+nmap / <Plug>(easymotion-sn)                        " / "
 
 " Prettier config 
 let g:prettier#autoformat = 0
