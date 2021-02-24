@@ -1,6 +1,50 @@
 filetype indent on 
 filetype plugin indent on
 
+" Load all package
+packloadall
+
+" Execute the vim-plug
+call plug#begin('~/.vim/plugged')
+
+" vim-rt-format plug
+Plug 'skywind3000/vim-rt-format', { 'do': 'pip3 install autopep8' }
+
+" NERDTree
+Plug 'preservim/nerdtree'
+
+call plug#end()
+
+" vim-rt-format config
+" use 'CTRL-ENTER' to trigger the insert mode
+let g:rtf_ctrl_enter = 0
+
+" Vimspector config 
+"packadd! vimspector
+"let g:vimspector_enable_mappings = 'HUMAN'
+"nmap <F5> <Plug>VimspectorContinue
+
+" Shortcut in NERDTree  
+nnoremap <leader>n :NERDTreeFocus<CR> 
+" Open the NERDTree
+nnoremap <C-n> :NERDTree<CR>           
+" Close the NERDTree
+nnoremap <C-t> :NERDTreeToggle<CR>
+" Find 
+nnoremap <C-f> :NERDTreeFind<CR>       
+
+" Easymotion 
+" s{char}{char} to move to {char}{char} overwindow
+nmap <Leader>F <Plug>(easymotion-overwin-f)
+" Move to line overwindow
+nmap <Leader>L <Plug>(easymotion-overwin-line)   
+"Searcn n-chars
+nmap / <Plug>(easymotion-sn)
+
+" Dracula theme 
+packadd! dracula
+colorscheme dracula
+
 " Syntax 
 syntax enable
 syntax on
@@ -20,45 +64,17 @@ set ruler
 " Set cursor highlight
 set cursorline
 
+" Select all
+nnoremap <C-A> ggVG
+
 " Get off my lawn 
 nnoremap <Left> :echoe "Use H" <CR>
 nnoremap <Right> :echoe "Use L" <CR>
 nnoremap <Up> :echoe "Use K" <CR>
 nnoremap <Down> :echoe "Use J"<CR>
 
-" Dracula theme 
-packadd! dracula
-colorscheme dracula
-
-" Execute the pathogen 
-execute pathogen#infect()
-
-" NERDTree Plugin
-call pathogen#infect()
-filetype plugin indent on
-
-" Shortcut in NERDTree  
-nnoremap <leader>n :NERDTreeFocus<CR>  
-nnoremap <C-n> :NERDTree<CR>           " Open the NERDTree
-nnoremap <C-t> :NERDTreeToggle<CR>     " Close the NERDTree
-nnoremap <C-f> :NERDTreeFind<CR>       " Find 
-
 " See the airline bar when start up Vim
 set laststatus=2 
-
-" Easymotion 
-" s{char}{char} to move to {char}{char} overwindow
-nmap <Leader>F <Plug>(easymotion-overwin-f)
-
-" Move to line overwindow
-nmap <Leader>L <Plug>(easymotion-overwin-line)   
-
-"Searcn n-chars
-nmap / <Plug>(easymotion-sn)
-
-" Prettier config 
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.scss,*.less,*.json,*.graphql,*.md,*.vue,*.py PrettierAsync 
 
 " Python config 
 let python_highlight_all = 1
