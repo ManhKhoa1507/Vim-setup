@@ -1,5 +1,5 @@
 filetype indent on 
-filetype plugin indent on
+filetype off 
 
 " Load all package
 packloadall
@@ -13,7 +13,19 @@ Plug 'skywind3000/vim-rt-format', { 'do': 'pip3 install autopep8' }
 " NERDTree
 Plug 'preservim/nerdtree'
 
+" jedi-vim 
+
 call plug#end()
+
+" Execute the Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Jedi-vim 
+Plugin 'davidhalter/jedi-vim'
+
+call vundle#end()
+filetype plugin indent on
 
 " vim-rt-format config
 " use 'CTRL-ENTER' to trigger the insert mode
