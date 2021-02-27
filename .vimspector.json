@@ -1,0 +1,35 @@
+{
+"configurations": {
+  
+  // Python debug conf
+  "Python - Launch": {
+    "adapter": "debugpy",
+    "configuration": {
+      "name": "Python: Launch current file",
+      "type": "python",
+      "request": "launch",
+      "stopOnEntry": false,
+      "console": "externalTerminal",
+      
+      "cwd": "${workspaceRoot}",
+      // ${workspaceRoot}/<program file>
+      "program": "${workspaceRoot}/test.py"
+    }
+  },
+
+  // C/C++ debug conf
+  "C - Launch": {
+    "adapter": "vscode-cpptools",
+    "configuration": {
+      "name": "Cpp: Launch current file",
+      "type": "cppdbg",
+      "request": "launch",
+      "externalConsole": true,
+      "stopOnEntry": true,
+      "stopAtEntry": true,
+  
+      // ${workspaceRoot}/<programfile>
+      "program": "${workspaceRoot}" 
+    }
+  }
+} }
