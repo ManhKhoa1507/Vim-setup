@@ -13,7 +13,10 @@ Plug 'skywind3000/vim-rt-format', { 'do': 'pip3 install autopep8' }
 " NERDTree
 Plug 'preservim/nerdtree'
 
-" jedi-vim 
+" Debugger Plugins
+" Vimspector
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
 
 call plug#end()
 
@@ -30,17 +33,16 @@ filetype plugin indent on
 " vim-rt-format config
 " use 'CTRL-ENTER' to trigger the insert mode
 let g:rtf_ctrl_enter = 0
-                                         
-" Vimspector config                               
-" Use Visual Studio-like mapping                  
+
+" Vimspector config
+" Use Visual Studio-like mapping
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-" Debugger remaps                                 
-" Open the Vimspector                             
-nnoremap <leader>dd :call vimspector#Launch()<CR> 
-" Quit the Vimspector                              
+" Debugger remaps
+" Open the Vimspector
+nnoremap <leader>dd :call vimspector#Launch()<CR>
+"Quit the Vimspector
 nnoremap <leader>dq :call vimspector#Reset()<CR>
 
-" NERDTree conf
 " Shortcut in NERDTree  
 nnoremap <leader>n :NERDTreeFocus<CR> 
 " Open the NERDTree
@@ -74,6 +76,9 @@ set shiftwidth=4
 set expandtab 
 set autoindent
 set nocompatible
+
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=cro
 
 " Set ruler 
 set ruler
