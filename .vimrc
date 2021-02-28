@@ -24,15 +24,27 @@ call plug#end()
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" AutoClose
+Plugin 'townk/vim-AutoClose'
+
+" Execute the Vundle
+Plugin 'Valloric/YouCompleteMe'
+
 " Jedi-vim 
 Plugin 'davidhalter/jedi-vim'
+
+" Clang-format
+Plugin 'cjuniet/clang-format.vim'
 
 call vundle#end()
 filetype plugin indent on
 
+
 " vim-rt-format config
 " use 'CTRL-ENTER' to trigger the insert mode
 let g:rtf_ctrl_enter = 0
+" Shortcut in vim-rt-format
+nmap <Leader>rt :RTFormatEnable<CR>
 
 " Vimspector config
 " Use Visual Studio-like mapping
@@ -42,6 +54,16 @@ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 nnoremap <leader>dd :call vimspector#Launch()<CR>
 "Quit the Vimspector
 nnoremap <leader>dq :call vimspector#Reset()<CR>
+
+" YouCompleteMe config
+" Trigger configuration. Do not use <tab> if use YCM
+let g:UltiSnipsExpandTrigger="<S-t>"
+let g:UltiSnipsJumpForwardTrigger="<S-f>"
+let g:UltiSnipsJumpBackwardTrigger="<S-b>"
+
+" ClangFormat config 
+" Shortcut in ClangFormat
+autocmd FileType c,cpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 
 " Shortcut in NERDTree  
 nnoremap <leader>n :NERDTreeFocus<CR> 
@@ -79,6 +101,9 @@ set nocompatible
 
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=cro
+
+" Set no swp file
+set noswapfile
 
 " Set ruler 
 set ruler
