@@ -52,7 +52,7 @@ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 " Debugger remaps
 " Open the Vimspector
 nnoremap <leader>dd :call vimspector#Launch()<CR>
-"Quit the Vimspector
+" Quit the Vimspector
 nnoremap <leader>dq :call vimspector#Reset()<CR>
 
 " YouCompleteMe config
