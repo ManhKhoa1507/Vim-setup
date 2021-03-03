@@ -1,4 +1,4 @@
-filetype indent on 
+filetype indent on  
 filetype off 
 
 " Load all package
@@ -23,6 +23,9 @@ call plug#end()
 " Execute the Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
+" EasyMotion
+Plugin 'easymotion/vim-easymotion'
 
 " AutoClose
 Plugin 'townk/vim-AutoClose'
@@ -75,12 +78,12 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>       
 
 " Easymotion 
-" s{char}{char} to move to {char}{char} overwindow
+" Search for n-chars
+nmap / <Plug>(easymotion-sn)
+"s{char}{char} to move to {char}{char} overwindow
 nmap <Leader>F <Plug>(easymotion-overwin-f)
 " Move to line overwindow
 nmap <Leader>L <Plug>(easymotion-overwin-line)   
-"Searcn n-chars
-nmap / <Plug>(easymotion-sn)
 
 " Dracula theme 
 packadd! dracula
