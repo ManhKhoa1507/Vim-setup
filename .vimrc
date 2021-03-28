@@ -1,5 +1,6 @@
 filetype indent on  
 filetype off 
+set nocompatible
 
 " Load all package
 packloadall
@@ -100,7 +101,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab 
 set autoindent
-set nocompatible
 
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=cro
