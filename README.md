@@ -4,11 +4,7 @@
 git clone https://github.com/ManhKhoa1507/Vim-setup.git
 
 # Get Vundle and Vim-plug
-
-# Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# vim-Plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
